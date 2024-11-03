@@ -8,6 +8,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 const testRoute = require("./routes/test");
+const homeRoute = require("./routes/homepage");
+const newMessageRoute = require("./routes/newMessage");
 
 const messages = [
   {
@@ -23,6 +25,8 @@ const messages = [
 ];
 
 app.use("/test", testRoute);
+app.use("/", homeRoute);
+app.use("/new", newMessageRoute);
 
 app.listen(3000, () => {
   console.log("Listening on port 3000");
