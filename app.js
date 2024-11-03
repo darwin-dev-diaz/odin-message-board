@@ -7,13 +7,15 @@ app.use(express.static(assetsPath));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const testRoute = require("./routes/test");
+// const testRoute = require("./routes/test");
 const homeRoute = require("./routes/homepage");
 const newMessageRoute = require("./routes/newMessage");
+const welcomeRoute = require("./routes/welcomePage");
+
 const messageService = require("./modules/messages");
 
-app.use("/test", testRoute);
-app.use("/", homeRoute);
+app.use("/", welcomeRoute);
+app.use("/messages", homeRoute);
 app.use("/new", newMessageRoute);
 
 app.listen(3000, () => {
