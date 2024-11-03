@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: ["./views/**/*.ejs"], // Include all EJS files in the views folder
   theme: {
     extend: {},
   },

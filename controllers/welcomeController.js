@@ -2,6 +2,6 @@
 
 module.exports = {
   get: (req, res) => {
-    res.send("This is the welcome page");
+    res.render("welcome", {});
   },
 };
