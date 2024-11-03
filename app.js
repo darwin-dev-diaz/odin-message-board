@@ -10,19 +10,7 @@ app.set("view engine", "ejs");
 const testRoute = require("./routes/test");
 const homeRoute = require("./routes/homepage");
 const newMessageRoute = require("./routes/newMessage");
-
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+const messageService = require("./modules/messages");
 
 app.use("/test", testRoute);
 app.use("/", homeRoute);
