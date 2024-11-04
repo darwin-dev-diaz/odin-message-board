@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <title>Register Page</title>
+    <script>
+      function validateForm(event) {
+        const username = document.getElementById("user").value.trim();
+        if (username === "") {
+          alert("Username cannot be blank.");
+          event.preventDefault(); // Prevent form submission
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-background">
+    <%- include('./components/header') %>
+    <div class="content flex h-full w-full items-center justify-center px-8">
+      <div
+        class="flex h-52 w-full items-center justify-center rounded-lg bg-white shadow-md"
+      >
+        <form
+          class="flex w-full flex-col items-center justify-center gap-3 p-6"
+          action="/register"
+          method="post"
+          onsubmit="validateForm(event)"
+        >
+          <input
+            class="block h-10 w-full rounded-lg border-[2px] border-[#dee1e2] border-[solid] bg-[#dee1e2] px-[10px] py-[5px] text-lg leading-normal text-[rgb(14,_14,_16)] [transition:box-shadow_100ms_ease-in,_border_100ms_ease-in,_background-color_100ms_ease-in] hover:border-[#ccc] focus:border-bordersDividers focus:bg-[#fff]"
+            type="text"
+            placeholder="Enter username..."
+            name="user"
+            id="user"
+          />
+          <button
+            type="submit"
+            class="rout h-10 w-full rounded-lg bg-accentColor text-2xl font-semibold text-white"
+          >
+            Start chatting
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

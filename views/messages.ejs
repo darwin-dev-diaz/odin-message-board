@@ -1,17 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
     <title>Messages</title>
   </head>
-  <body>
-    <% for (let i = 0; i < messages.length; i++) { %>
-    <li>
-      <p><%= messages[i].text %></p>
-      <p><%= messages[i].user %></p>
-      <p><%= messages[i].added %></p>
-    </li>
-    <% } %>
+  <body class="relative bg-background">
+    <%- include('./components/header') %>
+    <div
+      class="content items-left justify-left flex h-full w-full flex-col gap-5 overflow-y-scroll bg-black px-8 pb-64 pt-6"
+    >
+      <div class="message flex flex-shrink-0 flex-col bg-[#d4d4d4] p-4 rounded-lg">
+        <div class="flex items-center mb-3">
+          <span class="text-2xl font-semibold text-primText">Name &nbsp;</span>
+          <span class="text-lg font-medium text-[#9D9D9D]"
+            >| Sat. Octoboer 21, 2024</span
+          >
+        </div>
+        <span class="text-[20px] text-primText"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
+          labore! Minima amet reprehenderit eaque quibusdam? Cupiditate eaque
+          animi quasi commodi laudantium enim sapiente, explicabo, debitis qui
+          impedit totam. Sequi, nostrum.</span
+        >
+      </div>
+      <div class="message flex flex-shrink-0 flex-col bg-[#d4d4d4] p-4 rounded-lg">
+        <div class="flex items-center mb-3">
+          <span class="text-2xl font-semibold text-primText">Name &nbsp;</span>
+          <span class="text-lg font-medium text-[#9D9D9D]"
+            >| Sat. Octoboer 21, 2024</span
+          >
+        </div>
+        <span class="text-[20px] text-primText"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
+          labore! Minima amet reprehenderit eaque quibusdam? Cupiditate eaque
+          animi quasi commodi laudantium enim sapiente, explicabo, debitis qui
+          impedit totam. Sequi, nostrum.</span
+        >
+      </div><div class="message flex flex-shrink-0 flex-col bg-[#d4d4d4] p-4 rounded-lg">
+        <div class="flex items-center mb-3">
+          <span class="text-2xl font-semibold text-primText">Name &nbsp;</span>
+          <span class="text-lg font-medium text-[#9D9D9D]"
+            >| Sat. Octoboer 21, 2024</span
+          >
+        </div>
+        <span class="text-[20px] text-primText"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
+          labore! Minima amet reprehenderit eaque quibusdam? Cupiditate eaque
+          animi quasi commodi laudantium enim sapiente, explicabo, debitis qui
+          impedit totam. Sequi, nostrum.</span
+        >
+      </div><div class="message flex flex-shrink-0 flex-col bg-[#d4d4d4] p-4 rounded-lg">
+        <div class="flex items-center mb-3">
+          <span class="text-2xl font-semibold text-primText">Name &nbsp;</span>
+          <span class="text-lg font-medium text-[#9D9D9D]"
+            >| Sat. Octoboer 21, 2024</span
+          >
+        </div>
+        <span class="text-[20px] text-primText"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
+          labore! Minima amet reprehenderit eaque quibusdam? Cupiditate eaque
+          animi quasi commodi laudantium enim sapiente, explicabo, debitis qui
+          impedit totam. Sequi, nostrum.</span
+        >
+      </div><div class="message flex flex-shrink-0 flex-col bg-[#d4d4d4] p-4 rounded-lg">
+        <div class="flex items-center mb-3">
+          <span class="text-2xl font-semibold text-primText">Name &nbsp;</span>
+          <span class="text-lg font-medium text-[#9D9D9D]"
+            >| Sat. Octoboer 21, 2024</span
+          >
+        </div>
+        <span class="text-[20px] text-primText"
+          >Lorem  .</span
+        >
+      </div>
+    </div>
+    <%- include('./components/button') %>
   </body>
 </html>
