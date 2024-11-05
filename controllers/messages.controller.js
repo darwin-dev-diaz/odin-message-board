@@ -11,8 +11,14 @@ const getMessages = asyncHandler(async (req, res) => {
 });
 
 // create a new message and add it to the message array
-const sendMessages = asyncHandler(async () => {
-  messageService.addMessage();
+const sendMessage = asyncHandler(async (req, res) => {
+  if (req.body.message === "") return res.redirect("back");
+  messageService.addMessage({
+    text: req.body.message,
+    user: store("user") || "User",
+    added: new Date().toLocaleString(),
+  });
+  res.redirect("back");
 });
 
-module.exports = { getMessages };
+module.exports = { getMessages, sendMessage };

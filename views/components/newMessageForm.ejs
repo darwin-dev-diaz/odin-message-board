@@ -1,0 +1,40 @@
+<!-- new message form -->
+<script>
+  function hideForm(event) {
+    const form = document.getElementById("message-form");
+    const curtain = document.getElementById("curtain");
+    form.classList.add("hidden");
+    curtain.classList.add("hidden");
+  }
+  function scrollToBottom(event) {
+    const contentDiv = document.getElementById("messagesContainer");
+    contentDiv.scrollTop = contentDiv.scrollHeight;
+  }
+
+  function sendMessage(event) {
+    hideForm();
+    scrollToBottom();
+  }
+</script>
+<form
+  action="messages/new"
+  method="post"
+  class="absolute bottom-0 z-20 flex hidden h-64 w-full flex-col gap-4 rounded-t-[3rem] bg-white p-8"
+  onsubmit="sendMessage()"
+  id="message-form"
+>
+  <textarea
+    class="block w-full resize-none rounded-lg border-[2px] border-[#dee1e2] border-[solid] bg-[#dee1e2] px-[10px] py-[5px] text-lg leading-normal text-[rgb(14,_14,_16)] [transition:box-shadow_100ms_ease-in,_border_100ms_ease-in,_background-color_100ms_ease-in] hover:border-[#ccc] focus:border-bordersDividers focus:bg-[#fff]"
+    placeholder="Type message..."
+    name="message"
+    id="message"
+    maxlength="175"
+    rows="4"
+  ></textarea>
+  <button
+    type="submit"
+    class="h-10 w-full rounded-lg bg-accentColor text-2xl font-semibold text-white"
+  >
+    Send Message
+  </button>
+</form>
