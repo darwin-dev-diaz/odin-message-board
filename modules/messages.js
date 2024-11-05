@@ -1,15 +1,21 @@
+const formatDate = require("../util/formateDate");
 class MessageService {
   constructor() {
     this.messages = [
       {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date().toLocaleString(),
+        text: "Don't give up. We are so close to finishing TOP. I know you'll land your software job. You didn't come this far to give up. ✅ 👍",
+        user: "Darwin (Creator)",
+        added: formatDate(new Date()),
       },
       {
-        text: "Hello World!",
+        text: "Hi there! 🤣",
+        user: "Amando",
+        added: formatDate(new Date()),
+      },
+      {
+        text: "Hello World! 🤓 🌍",
         user: "Charles",
-        added: new Date().toLocaleString(),
+        added: formatDate(new Date()),
       },
     ];
   }
@@ -20,13 +26,6 @@ class MessageService {
 
   addMessage(newMessageObj) {
     this.messages.push(newMessageObj);
-  }
-  removeMessage(messageId) {
-    if (messageId >= 0 && messageId < this.messages.length) {
-      this.messages.splice(messageId, 1);
-    } else {
-      throw new Error("Invalid message ID");
-    }
   }
 }
 

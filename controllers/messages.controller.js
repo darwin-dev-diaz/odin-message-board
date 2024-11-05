@@ -1,8 +1,9 @@
 const messageService = require("../modules/messages");
 const asyncHandler = require("express-async-handler");
 const store = require("store2");
+const formatDate = require("../util/formateDate");
 
-// if there is no username, redirect to sign in page
+// if there is no username, redirect to register page
 // display all messages
 const getMessages = asyncHandler(async (req, res) => {
   if (!store("user")) return res.redirect("/");
@@ -16,7 +17,7 @@ const sendMessage = asyncHandler(async (req, res) => {
   messageService.addMessage({
     text: req.body.message,
     user: store("user") || "User",
-    added: new Date().toLocaleString(),
+    added: formatDate(new Date()),
   });
   res.redirect("back");
 });

@@ -17,7 +17,9 @@
   </head>
   <body class="bg-background">
     <%- include('./components/header') %>
-    <div class="content flex h-full w-full items-center justify-center px-8">
+    <div
+      class="content flex h-full w-full items-center justify-center px-8 max-w-96 lg:max-w-[30rem]"
+    >
       <div
         class="flex h-52 w-full items-center justify-center rounded-lg bg-white shadow-md"
       >
@@ -32,6 +34,7 @@
             type="text"
             placeholder="Enter username..."
             name="user"
+            maxlength="10"
             id="user"
           />
           <button

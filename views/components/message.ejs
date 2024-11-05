@@ -1,9 +1,11 @@
 <div class="message flex flex-shrink-0 flex-col rounded-lg bg-[#E9E9E9] p-4">
   <div class="mb-3 flex items-center">
-    <span class="text-2xl font-semibold text-primText">
+    <span class="text-base font-semibold text-primText md:text-2xl">
       <%= name %> &nbsp;</span
     >
-    <p class="text-lg font-medium text-[#9D9D9D]">| <%= date %></p>
+    <p class="text-base font-medium text-[#9D9D9D] md:text-lg">| <%= date %></p>
   </div>
-  <span class="text-[20px] text-primText whitespace-normal"> <%= text %> </span>
+  <span class="whitespace-normal text-base text-primText md:text-[20px]">
+    <%= text %>
+  </span>
 </div>
