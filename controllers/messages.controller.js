@@ -1,4 +1,3 @@
-const messageService = require("../modules/messages");
 const asyncHandler = require("express-async-handler");
 const store = require("store2");
 const formatDate = require("../util/formateDate");
