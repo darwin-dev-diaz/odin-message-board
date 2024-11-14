@@ -23,7 +23,7 @@
       id="messagesContainer"
     >
     <% for(var i=0; i < messages.length; i++) {%>
-      <%- include('./components/message', {name: messages[i].user, text: messages[i].text, date: messages[i].added}) %>
+      <%- include('./components/message', {name: messages[i].username, text: messages[i].message, date: messages[i].time}) %>
    <% } %>
   </div>
     <%- include('./components/button') %>

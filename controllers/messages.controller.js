@@ -2,13 +2,15 @@ const messageService = require("../modules/messages");
 const asyncHandler = require("express-async-handler");
 const store = require("store2");
 const formatDate = require("../util/formateDate");
+const db = require("../db/queries");
 
 // if there is no username, redirect to register page
 // display all messages
 const getMessages = asyncHandler(async (req, res) => {
   if (!store("user")) return res.redirect("/");
 
-  res.render("messages", { messages: messageService.getMessages() });
+  const messages = await db.getAllMessages();
+  res.render("messages", { messages: messages });
 });
 
 // create a new message and add it to the message array
