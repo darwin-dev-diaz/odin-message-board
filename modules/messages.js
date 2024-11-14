@@ -4,12 +4,12 @@ class MessageService {
     this.messages = [
       {
         text: "Don't give up. We are so close to finishing TOP. I know you'll land your software job. You didn't come this far to give up. ✅ 👍",
-        user: "Darwin (Creator)",
+        user: "Darwin CEO",
         added: formatDate(new Date()),
       },
       {
         text: "Join us for the annual company picnic next Friday at Central Park. There will be games, food, and fun activities for everyone. Family members are welcome. Please RSVP by Wednesday so we can finalize the arrangements.",
-        user: "Bobby Shmurda (HR)",
+        user: "Bobby (HR)",
         added: formatDate(new Date()),
       },
       {
@@ -19,7 +19,7 @@ class MessageService {
       },
       {
         text: "Don't forget about the meeting scheduled for tomorrow at 10 AM in the main conference room. We will be discussing the project timelines and assigning new tasks. Your presence is highly appreciated.",
-        user: "Jane Doe (CFO)",
+        user: "Jane (CFO)",
         added: formatDate(new Date()),
       },
       {
