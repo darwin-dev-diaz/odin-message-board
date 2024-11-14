@@ -49,7 +49,7 @@ async function main() {
   console.log("seeding...");
   const client = new Client({
     connectionString:
-      argv[0] ||
+      argv[argv.length - 1] ||
       `postgresql://${process.env.ROLE_NAME}:${process.env.ROLE_PASSWORD}@localhost:5432/messages_db`,
   });
 
